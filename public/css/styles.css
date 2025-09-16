@@ -1,0 +1,84 @@
+/*Website*/
+body {
+    margin: 0;
+    background-color:aliceblue;
+    padding: 10px;
+}
+
+h1{
+    font-family:'Courier New', Courier, monospace;
+}
+
+p{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+small{
+    color:cadetblue;
+}
+
+/*Homepage*/
+.entrymessage{
+    color: black;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.blog-button-container{
+    margin: 20px;
+}
+
+.new-blog-submit{
+    font-family: 'Trebuchet MS';
+    background-color: blue;
+    color: white;
+    border-radius: 4px;
+    width: 125px;
+    padding: 10px;
+}
+
+.new-blog-submit:hover{
+    background-color: rgb(52, 52, 245);
+    color: white;
+    transform: scale(1.05);
+}
+
+/*Blog Form*/
+#create-blog-title{
+    text-align: center;
+}
+
+.blogform-container{
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blogform{
+    width: 100%;
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 14px;
+}
+
+/*page of blogs*/
+.blog-container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}
+
+#view-title{
+    color: blue;
+}
+
+.view-post-button{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
