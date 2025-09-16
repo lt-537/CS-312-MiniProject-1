@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+<body>
+    <div class="viewPost">
+        <h1 id="view-title"><%= post.blogTitle%></h1>
+        <small>Posted by <%= post.blogPublisher%></small>
+        <small>on <%= post.datePublished%></small>
+        <p><%= post.blogContent%></p>
+        <div class="view-post-button">
+            <form method="GET" action="/edit-blog/<%= post.id%>">
+                <button type="submit">Edit</button>
+            </form>
+
+            <form method="POST" action="/delete-blog/<%= post.id%>">
+                <button type="submit">Delete</button>
+            </form>
+            <a id="link-back" href="/">Back</a>
+        </div>
+    </div>
+</body>
+</html>

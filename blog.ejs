@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1 id="create-blog-title">Create your blog post!</h1>
+
+    <div class="blogform-container">
+        <form class="blogform" action="/submit" method="POST">
+            <label for="blog-title">Blog Title:</label>
+            <input type="text" id="BlogTitle" name="blogTitle" placeholder="Blog Title" required>
+            <label for="publisher">Publisher Name:</label>
+            <input type="text" id="Publisher" name="blogPublisher" placeholder="Your Name" required>
+            <label for="blog-content">Content:</label>
+            <textarea id="BlogContent" name="blogContent" rows="5" cols="40" placeholder="Write content here" required></textarea>
+            <label for="date-published">Date Published:</label>
+            <input type="date" id="Date" name="datePublished" required>
+            <button type="submit" id="blog-button">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

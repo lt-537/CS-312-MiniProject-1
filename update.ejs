@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+    <body>
+        <h1 id="create-blog-title">Update your blog post!</h1>
+        <div class="blogform-container">
+            <form class="blogform" method="POST" action="/update/<%= post.id%>">
+                <label>Blog Title:</label>
+                <input type="text" name="blogTitle" required value="<%= post.blogTitle%>">
+
+                <label>Publisher Name:</label>
+                <input type="text" name="blogPublisher" required value="<%= post.blogPublisher%>">
+
+                <label>Content:</label>
+                <textarea name="blogContent" rows="5" cols="40" required><%= post.blogContent%></textarea>
+
+                <label>Date Published:</label>
+                <input type="date" name="datePublished" required value="<%=post.datePublished%>">
+
+                <button type="submit" value="Submit">Save</button>
+            </form>
+        </div>
+    </body>
+</html>

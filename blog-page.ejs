@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+<body>
+    <h1 class="entrymessage"><%= message %></h1>
+    <%if(blogUser.length === 0) { %>    
+        <div class="blog-button-container">
+            <form method="GET" action="/blog-route">
+                <button class="new-blog-submit" type="Submit" ">New Blog Post</button>
+            </form>
+        </div>
+    <%} else {%>
+    <div class="blog-container">
+        <% for(let i = 0; i < blogUser.length; i++){ %>
+            <div class="blog-post">
+                <li>
+                    <a href="/show-post/<%= blogUser[i].id%>"><%= blogUser[i].blogTitle%> by <%= blogUser[i].blogPublisher%></a>
+                </li>
+            </div>
+         <% } %>
+    </div>
+
+    <div class="blog-button-container">
+        <form method="GET" action="/blog-route">
+            <button class="new-blog-submit" type="Submit" ">New Blog Post</button>
+        </form>
+    </div>
+    <%}%>
+</body>
+</html>
